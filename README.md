@@ -26,12 +26,17 @@
 
 <br/>
 
-In short, `vite-plugin-electron-renderer` is responsible for polyfilling Electron, Node.js built-in modules.
+In short, `@tomjs/vite-plugin-electron-renderer` is responsible for polyfilling Electron, Node.js built-in modules.
+
+## Notice
+
+This project is copied from [vite-plugin-electron-renderer](https://github.com/electron-vite/vite-plugin-electron-renderer), only adding exports such as `app` and `ipcMain` to support [electron-store@10.0.0+](https://github.com/sindresorhus/electron-store)
 
 ## Install
 
 ```sh
-npm i vite-plugin-electron-renderer -D
+pnpm add @tomjs/vite-plugin-electron-renderer -D
+npm i @tomjs/vite-plugin-electron-renderer -D
 ```
 
 ## Usage
@@ -39,7 +44,7 @@ npm i vite-plugin-electron-renderer -D
 1. This just modifies some of Vite's default config to make the Renderer process works.
 
 ```js
-import renderer from 'vite-plugin-electron-renderer'
+import renderer from '@tomjs/vite-plugin-electron-renderer';
 
 export default {
   plugins: [
@@ -51,7 +56,7 @@ export default {
 2. Using the third-part `C/C++`, `esm` package in the Renderer process.
 
 ```js
-import renderer from 'vite-plugin-electron-renderer'
+import renderer from '@tomjs/vite-plugin-electron-renderer';
 
 export default {
   plugins: [
@@ -96,9 +101,9 @@ export interface RendererOptions {
 }
 ```
 
-## [Examples](https://github.com/electron-vite/vite-plugin-electron-renderer/tree/main/examples)
+## [Examples](https://github.com/tomjs/vite-plugin-electron-renderer/tree/main/examples)
 
-- [quick-start](https://github.com/electron-vite/vite-plugin-electron-renderer/tree/main/examples/quick-start)
+- [quick-start](https://github.com/tomjs/vite-plugin-electron-renderer/tree/main/examples/quick-start)
 
 ## How to work
 

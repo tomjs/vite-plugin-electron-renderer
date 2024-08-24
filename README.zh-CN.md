@@ -2,7 +2,11 @@
 
 简而言之，`vite-plugin-electron-renderer` 职责是填充 Electron, Node.js 内置模块。
 
-[English](https://github.com/electron-vite/vite-plugin-electron-renderer#readme) | 简体中文
+[English](https://github.com/tomjs/vite-plugin-electron-renderer#readme) | 简体中文
+
+# 说明
+
+本项目从 [vite-plugin-electron-renderer](https://github.com/electron-vite/vite-plugin-electron-renderer) 复制，仅添加了 `app`、`ipcMain` 等导出，用于支持 [electron-store@10.0.0+](https://github.com/sindresorhus/electron-store)
 
 ## 原理
 
